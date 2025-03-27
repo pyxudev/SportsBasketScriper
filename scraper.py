@@ -35,7 +35,7 @@ try:
         if pages == 0:
             text += getdetails(soup)
         for page in range(1, pages):
-            url += "&p=" + str(page)
+            url += "&p=" + str(page+1)
             soup = getsoup(url)
             text += getdetails(soup)
     print(text)
